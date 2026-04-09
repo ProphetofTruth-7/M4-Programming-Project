@@ -36,5 +36,11 @@ int main()
     calendar.monthNormPrint();
     calendar.monthAltPrint();
 
+    cout << endl;
+
+    Date value3(calendar.getMonth(), calendar.getDay(), calendar.getYear(), calendar.getMonthName());
+    calendar = calendar + value3;
+    calendar.monthNormPrint();
+
     return 0;
 }

@@ -318,5 +318,7 @@ public:
      *   - A report is printed(day monthName year)
      */
     void monthAltPrint();
+
+	Date operator+(const Date& n) const;
 };
 #endif

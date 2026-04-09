@@ -181,6 +181,27 @@ void Date::numericalPrint() {
 void Date::monthNormPrint() {
     cout << monthName << " " << day << ", " << year << endl;
 }
+
 void Date::monthAltPrint() {
     cout << day << " " << monthName << " " << year << endl;
+}
+
+Date Date::operator+(const Date& n) const {
+    Date result = *this;
+    if (result.day + 1 < result.lastDay()) {
+        result.day += 1;
+    }
+    else {
+        result.day = 1;
+        if (result.month < 12) {
+            result.month += 1;
+        }
+        else {
+            result.month = 1;
+            result.year += 1;
+        }
+        result.setMonthName();
+    }
+
+    return result;
 }
