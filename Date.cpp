@@ -219,8 +219,8 @@ Date& Date::operator--() {
     return *this;
 }
 
-ostream& operator <<(ostream& collate, const Date& d) {
-    collate << d.getMonthName() << " " << d.getDay() << ", " << d.getYear();
+ostream& operator<< (ostream& collate, const Date& d) {
+    collate << d.getMonthName() << " " << d.getDay() << ", " << d.getYear() << endl;
     return collate;
 }
 

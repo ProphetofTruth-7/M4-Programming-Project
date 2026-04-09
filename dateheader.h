@@ -323,6 +323,6 @@ public:
     Date& operator--();
 };
 
-// Returns the absolute difference in days between two dates: |a - b|
+ostream& operator<< (ostream& collate, const Date& d);
 int operator-(const Date& a, const Date& b);
 #endif

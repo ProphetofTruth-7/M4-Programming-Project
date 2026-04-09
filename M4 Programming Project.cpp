@@ -47,7 +47,7 @@ int main()
 
     calendar = --calendar;
     cout << "Yesterday's Date was: ";
-    calendar.monthNormPrint();
+    cout << calendar;
 
     cout << "The number of days between your chosen date and April 9th, 2025 is: " << between << endl;
 
