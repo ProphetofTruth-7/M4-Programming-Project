@@ -39,7 +39,12 @@ int main()
     cout << endl;
 
     Date value3(calendar.getMonth(), calendar.getDay(), calendar.getYear(), calendar.getMonthName());
-    calendar = calendar + value3;
+    calendar = ++calendar;
+    cout << "Tomorrow's Date is: ";
+    calendar.monthNormPrint();
+
+    calendar = --calendar;
+    cout << "Yesterday's Date was: ";
     calendar.monthNormPrint();
 
     return 0;

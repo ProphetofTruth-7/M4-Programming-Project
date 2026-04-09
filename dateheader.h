@@ -319,6 +319,7 @@ public:
      */
     void monthAltPrint();
 
-	Date operator+(const Date& n) const;
+    Date& operator++();
+    Date& operator--();
 };
 #endif

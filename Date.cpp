@@ -186,22 +186,40 @@ void Date::monthAltPrint() {
     cout << day << " " << monthName << " " << year << endl;
 }
 
-Date Date::operator+(const Date& n) const {
-    Date result = *this;
-    if (result.day + 1 < result.lastDay()) {
-        result.day += 1;
-    }
-    else {
-        result.day = 1;
-        if (result.month < 12) {
-            result.month += 1;
+Date& Date::operator++() {
+    if (day + 1 < lastDay()) {
+        day += 1;
+    } else {
+        day = 1;
+        if (month < 12) {
+            month += 1;
+        } else {
+            month = 1;
+            year += 1;
         }
-        else {
-            result.month = 1;
-            result.year += 1;
-        }
-        result.setMonthName();
+        setMonthName();
     }
-
-    return result;
+    return *this;
 }
+
+// Prefix -- : decrement this date by one day and return reference to modified object
+Date& Date::operator--() {
+    if (day > 1) {
+        day -= 1;
+    } else {
+        // move to last day of previous month
+        if (month > 1) {
+            month -= 1;
+        } else {
+            month = 12;
+            year -= 1;
+        }
+        // set day to last day of the (new) month
+        day = lastDay() - 1;
+        setMonthName();
+    }
+    return *this;
+}
+
+
+        
