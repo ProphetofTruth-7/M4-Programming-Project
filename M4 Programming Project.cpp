@@ -38,14 +38,18 @@ int main()
 
     cout << endl;
 
-    Date value3(calendar.getMonth(), calendar.getDay(), calendar.getYear(), calendar.getMonthName());
+    Date AltCalendar(4, 9, 2025, "April");
+    int between = calendar - AltCalendar;
+
     calendar = ++calendar;
     cout << "Tomorrow's Date is: ";
-    calendar.monthNormPrint();
+    cout << calendar;
 
     calendar = --calendar;
     cout << "Yesterday's Date was: ";
     calendar.monthNormPrint();
+
+    cout << "The number of days between your chosen date and April 9th, 2025 is: " << between << endl;
 
     return 0;
 }

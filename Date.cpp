@@ -202,23 +202,53 @@ Date& Date::operator++() {
     return *this;
 }
 
-// Prefix -- : decrement this date by one day and return reference to modified object
 Date& Date::operator--() {
+    day -= 1;
     if (day > 1) {
         day -= 1;
     } else {
-        // move to last day of previous month
         if (month > 1) {
             month -= 1;
         } else {
             month = 12;
             year -= 1;
         }
-        // set day to last day of the (new) month
         day = lastDay() - 1;
-        setMonthName();
     }
+    setMonthName();
     return *this;
+}
+
+ostream& operator <<(ostream& collate, const Date& d) {
+    collate << d.getMonthName() << " " << d.getDay() << ", " << d.getYear();
+    return collate;
+}
+
+int operator-(const Date& a, const Date& b) {  //Had exterior help. I neither understand how to create a member function or friend of this
+    auto daysSinceEpoch = [](const Date& dt) -> long long {
+        int y = dt.getYear();
+        int m = dt.getMonth();
+        int d = dt.getDay();
+
+        if (m <= 2) {
+            y -= 1;
+            m += 12;
+        }
+
+        long long yy = y;
+        long long mm = m;
+
+        long long days = 365 * yy + yy / 4 - yy / 100 + yy / 400;
+        days += (153 * (mm - 3) + 2) / 5 + d - 1;
+
+        return days;
+    };
+
+    long long da = daysSinceEpoch(a);
+    long long db = daysSinceEpoch(b);
+    long long diff = da - db;
+    if (diff < 0) diff = -diff;
+    return static_cast<int>(diff);
 }
 
 

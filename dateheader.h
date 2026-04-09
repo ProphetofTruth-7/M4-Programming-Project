@@ -322,4 +322,7 @@ public:
     Date& operator++();
     Date& operator--();
 };
+
+// Returns the absolute difference in days between two dates: |a - b|
+int operator-(const Date& a, const Date& b);
 #endif
