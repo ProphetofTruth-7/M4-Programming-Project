@@ -224,6 +224,20 @@ ostream& operator<< (ostream& collate, const Date& d) {
     return collate;
 }
 
+istream& operator>> (istream& input, Date& n) {
+    int m, d, y;
+    if (!(input >> m >> d >> y)) {
+        return input;
+    }
+    n.setYear(y);
+    n.setMonth(m);
+    n.setDay(d);
+
+    cout << endl;
+
+    return input;
+}
+
 int operator-(const Date& a, const Date& b) {  //Had exterior help. I neither understand how to create a member function or friend of this
     auto daysSinceEpoch = [](const Date& dt) -> long long {
         int y = dt.getYear();

@@ -20,15 +20,8 @@ int main()
 
     int userReply = 0;
 
-    cout << "What is the Year(current or chosen): ";
-    cin >> userReply;
-    calendar.setYear(userReply);
-    cout << "What is the Month(current or chosen): ";
-    cin >> userReply;
-    calendar.setMonth(userReply);
-    cout << "What is the Day(current or chosen): ";
-    cin >> userReply;
-    calendar.setDay(userReply);
+    cout << "What is the Month, Day, and Year(Current or Chosen, in that order): ";
+    cin >> calendar;
 
     cout << endl;
 

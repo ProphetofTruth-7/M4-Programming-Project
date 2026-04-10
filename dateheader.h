@@ -1,6 +1,7 @@
 #ifndef DATEHEADER_H
 #define DATEHEADER_H
 #include <string>
+#include <iostream>
 using namespace std;
 
 // This is the Header File, containing Prototypes for all Member Function and the Class itself //
@@ -324,5 +325,6 @@ public:
 };
 
 ostream& operator<< (ostream& collate, const Date& d);
+istream& operator>> (istream& input, Date& n);
 int operator-(const Date& a, const Date& b);
 #endif
