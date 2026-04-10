@@ -26,7 +26,7 @@ int main()
     cout << endl;
 
     calendar.numericalPrint();
-    calendar.monthNormPrint();
+    cout << calendar;
     calendar.monthAltPrint();
 
     cout << endl;

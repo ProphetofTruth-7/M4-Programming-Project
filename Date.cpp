@@ -261,7 +261,7 @@ int operator-(const Date& a, const Date& b) {  //Had exterior help. I neither un
     long long da = daysSinceEpoch(a);
     long long db = daysSinceEpoch(b);
     long long diff = da - db;
-    if (diff < 0) diff = -diff;
+    if (diff < 0) diff = -diff;  //this checks for negative distance, then flips it as needed
     return static_cast<int>(diff);
 }
 

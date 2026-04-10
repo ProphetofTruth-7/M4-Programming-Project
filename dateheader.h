@@ -320,11 +320,105 @@ public:
      */
     void monthAltPrint();
 
+    /*
+     * operator++
+     * ------------------------------------------------------------
+     * An overloaded function that increments the date by 1(changing month and year as needed), returning an updated Date object
+     *
+     * Inputs:
+     *   Date Constructor            - A fully initialized constructor that serves as the basis for the incrementing process
+     * Outputs:
+     *   *this    - A pointer to the updated Date object
+     *
+     * Preconditions:
+     *   - The constructor has been fully initialized(day, year, and month can be either default or user-defined)
+     *
+     * Postconditions:
+     *   - The Date object is updated(incremented), and a pointer to said updated object is returned
+     */
     Date& operator++();
+
+    /*
+     * operator--
+     * ------------------------------------------------------------
+     * An overloaded function that decrements the date by 1(changing month and year as needed), returning an updated Date object
+     *
+     * Inputs:
+	 *   Date Constructor            - A fully initialized constructor that serves as the basis for the decrementing process
+     * Outputs:
+     *   *this    - A pointer to the updated Date object
+     *
+     * Preconditions:
+	 *   - The constructor has been fully initialized(day, year, and month can be either default or user-defined)
+     *
+     * Postconditions:
+     *   - The Date object is updated(decremented), and a pointer to said updated object is returned
+     */
     Date& operator--();
 };
 
+/*
+     * operator<<
+     * ------------------------------------------------------------
+     * An overloaded function that allows the day, monthName, and year to be retrieved directly from the class
+     *
+     * Inputs:
+     *   day                - The private integer variable that denotes the days of a calendar month
+     *   monthName          - The private string variable that denotes the months of a calendar year in a alphabetical sense
+     *   year               - The private integer variable that denotes the Gregorian Year
+     * Outputs:
+     *   Collated Report    - A formatted report that lists the current values of the day, monthName, and year variables
+     *
+     * Preconditions:
+     *   - The day, monthName, and year values have extant values, either unique or default
+     *   - No conflicting values in regards to the numerous classes fluttering around
+     *
+     * Postconditions:
+     *   - A report is printed(monthName day, year)
+     */
 ostream& operator<< (ostream& collate, const Date& d);
+
+/*
+     * operator>>
+     * ------------------------------------------------------------
+     * An overloaded function that allows a user-decided day, month, and year be entered directly into the class
+     *
+     * Inputs:
+     *   d          - A user-defined integer variable that denotes the days of a calendar month
+     *   m          - A user-defined integer variable that denotes the months of a calendar year
+     *   y          - A user-defined integer variable that denotes the Gregorian Year
+     * Outputs:
+     *   day                - The now-mutated private integer variable that denotes the days of a calendar month
+     *   month              - The now-mutated string variable that denotes the months of a calendar year
+     *   year               - The now-mutated integer variable that denotes the Gregorian Year
+     *
+     * Preconditions:
+     *   - The day, month, and year values are extant
+     *   - The given d, m, and y values are valid
+     *   - <iostream> is included
+     *
+     * Postconditions:
+     *   - The day, month, year(and monthName, technically) are mutated by the user's desires
+     */
 istream& operator>> (istream& input, Date& n);
+
+/*
+     * operator-
+     * ------------------------------------------------------------
+     * An overloaded function that allows the user to calculate the time between April 8th, 2026 and the chosen date
+     *
+     * Inputs:
+     *   day                - The private integer variable that denotes the days of a calendar month
+     *   month              - The private string variable that denotes the months of a calendar year
+     *   year               - The private integer variable that denotes the Gregorian Year
+     * Outputs:
+     *   diff               - The number of days between the Class-stored date and April 8th, 2026
+     *
+     * Preconditions:
+     *   - The day, month, and year values are extant
+     *
+     * Postconditions:
+     *   - The number of days between the Class-stored date and April 8th, 2026 are returned
+     */
 int operator-(const Date& a, const Date& b);
 #endif
