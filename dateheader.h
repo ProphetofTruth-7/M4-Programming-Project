@@ -405,20 +405,20 @@ istream& operator>> (istream& input, Date& n);
 /*
      * operator-
      * ------------------------------------------------------------
-     * An overloaded function that allows the user to calculate the time between April 8th, 2026 and the chosen date
+     * An overloaded function that allows the user to calculate the time between April 9th, 2026 and the chosen date
      *
      * Inputs:
      *   day                - The private integer variable that denotes the days of a calendar month
      *   month              - The private string variable that denotes the months of a calendar year
      *   year               - The private integer variable that denotes the Gregorian Year
      * Outputs:
-     *   diff               - The number of days between the Class-stored date and April 8th, 2026
+     *   diff               - The number of days between the Class-stored date and April 9th, 2026
      *
      * Preconditions:
      *   - The day, month, and year values are extant
      *
      * Postconditions:
-     *   - The number of days between the Class-stored date and April 8th, 2026 are returned
+     *   - The number of days between the Class-stored date and April 9th, 2026 are returned
      */
 int operator-(const Date& a, const Date& b);
 #endif
