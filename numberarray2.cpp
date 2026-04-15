@@ -22,9 +22,7 @@ void NumberArray::setNumber(int index, double value) {
 }
 
 void NumberArray::setSize(int x) {
-    if (round(x) > 0) {
         size = round(x);
-    }
 }
 
 int NumberArray::getSize() const {
@@ -32,7 +30,7 @@ int NumberArray::getSize() const {
 }
 
 double NumberArray::getNumber(int index) inline const {
-    if (index > 0 && index < size) {
+    if (index > -1 && index < size) {
         return data[index];
     }
     else {

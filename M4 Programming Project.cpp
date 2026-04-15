@@ -11,7 +11,12 @@ int main()
 
     cout << "Please enter the size of your array!" << endl;
     int userSize = 0;
-    cin >> userSize;
+    do { 
+        cin >> userSize;
+        if (userSize < 1 || userSize > MAX_SIZE) {
+            cout << "Invalid size! Please enter a number between 1 and " << MAX_SIZE << endl;
+        }
+	} while (round(userSize) < 1 || round(userSize) > MAX_SIZE);
     userarray.setSize(userSize);
 
     cout << "Filling the Dynamic Array! Please enter your chosen number, then press enter" << endl;
