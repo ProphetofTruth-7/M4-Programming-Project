@@ -18,5 +18,13 @@
     <ClCompile Include="M4 Programming Project.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="numberarray2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="numberarray2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
