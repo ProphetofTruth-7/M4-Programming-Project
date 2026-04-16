@@ -14,6 +14,12 @@ public:
     // Constructor //
     NumberArray(int s);
 
+    // Copy Constructor //
+    NumberArray(const NumberArray& other);
+
+    // Copy Assignment Operator //
+    NumberArray& operator=(const NumberArray& other);
+
     // Deconstructor //
     ~NumberArray();
 
@@ -89,7 +95,7 @@ public:
      * Postconditions:
      *   - The value at the specified index is returned directly to the function call
      */
-    double getNumber(int index) inline const;
+    double getNumber(int index) const;
     /*
      * getMin
      * ------------------------------------------------------------

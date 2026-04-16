@@ -9,7 +9,7 @@ int main()
 {
     NumberArray userarray(MAX_SIZE);
 
-    cout << "Please enter the size of your array!" << endl;
+    cout << "Please enter the size of your array! " << endl;
     int userSize = 0;
     do { 
         cin >> userSize;

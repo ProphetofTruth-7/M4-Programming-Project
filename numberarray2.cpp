@@ -10,6 +10,32 @@ NumberArray::NumberArray(int s) : size(s), data(nullptr) {
     }
 }
 
+NumberArray::NumberArray(const NumberArray& other) : size(other.size), data(nullptr) {
+    data = new double[size];
+
+    for (int i = 0; i < size; ++i) {
+        data[i] = other.data[i];
+    }
+}
+
+NumberArray& NumberArray::operator=(const NumberArray& other) {
+    if (this == &other) { //check for self-assignment
+        return *this;
+    }
+  
+    if (size != other.size) {
+        delete[] data; //release existing memory
+        size = other.size; // reassign size(not included)
+        data = new double[size]; //allocate new memory
+    }
+
+    for (int i = 0; i < size; ++i) { //copy all values
+        data[i] = other.data[i];
+    }
+
+    return *this; //return this
+}
+
 NumberArray::~NumberArray() {
     delete[] data;
     cout << "Memory has been cleared" << endl;
@@ -29,7 +55,7 @@ int NumberArray::getSize() const {
     return size;
 }
 
-double NumberArray::getNumber(int index) inline const {
+double NumberArray::getNumber(int index) const {
     if (index > -1 && index < size) {
         return data[index];
     }
