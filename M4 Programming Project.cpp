@@ -62,14 +62,5 @@ int main()
     cout << "A copy of the First Array has been created! Here are it's values: " << endl;
     userarray3.print();
 
-    cout << endl;
-    cout << endl;
-    cout << endl;
-
-    // COPY ASSIGN ARRAY
-    userarray2 = userarray;
-    cout << "Your First Array's values has been Copy-Assigned to the Second Array. Here are it's values: " << endl;
-    userarray2.print();
-
     return 0;
 }
