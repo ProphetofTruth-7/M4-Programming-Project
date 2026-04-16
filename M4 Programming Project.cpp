@@ -37,5 +37,11 @@ int main()
 
     userarray.print();
 
+    cout << endl;
+
+    NumberArray userarray2 = userarray;
+    cout << "A copy of the First Array has been created! Here are it's values: " << endl;
+    userarray2.print();
+
     return 0;
 }
