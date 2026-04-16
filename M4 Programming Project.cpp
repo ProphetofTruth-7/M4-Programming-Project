@@ -27,19 +27,13 @@ int main()
         userarray.setNumber(d, userChoice);
     }
 
-    cout << "This is the first index from the array: " << userarray.getNumber(0) << endl;
-    if (userarray.getSize() > 2) {
-        cout << "This is the third index from the array: " << userarray.getNumber(2) << endl;
-    }
-    if (userarray.getSize() > 6) {
-        cout << "This is the sixth index from the array: " << userarray.getNumber(6) << endl;
-    }
-
     userarray.print();
 
     cout << endl;
+    cout << endl;
+    cout << endl;
 
-    NumberArray userarray2 = userarray;
+    NumberArray userarray3 = userarray;
     cout << "A copy of the First Array has been created! Here are it's values: " << endl;
     userarray2.print();
 

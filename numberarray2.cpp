@@ -104,6 +104,7 @@ void NumberArray::print() const {
     cout << "The Average Value is: " << getAverage() << endl;
     cout << endl;
 
+    cout << "These are the values in this array: ";
     for (int i = 0; i < size; i++) {
         cout << data[i] << " ";
     }
