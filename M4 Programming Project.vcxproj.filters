@@ -18,5 +18,22 @@
     <ClCompile Include="M4 Programming Project.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="parkedcar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="parkingmeter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="parkedcar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="parkingmeter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="parkingticket.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
