@@ -17,11 +17,13 @@ ParkingTicket::ParkingTicket(const ParkedCar& car, const ParkingMeter& meter)
     }
     else {
         int minutesOver = minutesParked - minutesBought;
-        fine = 25 + 10 * ceil(minutesOver / 60.0);
+        fine = 25 + 10 * ceil((minutesOver - 59)/ 60.0);
     }
 }
 
-int ParkingTicket::getFine() const { return fine; }
+int ParkingTicket::getFine() const { 
+    return fine; 
+}
 
 const string& ParkingTicket::getLicenseNumber() const { 
     return licenseNumber; 

@@ -6,11 +6,11 @@
 
 int main()
 {
-	ParkedCar car1("Dodge", "Charger", "Blue", "B8KERBY", 120);
-	ParkingMeter meter(200);
+	ParkedCar car1("Dodge", "Charger", "Blue", "B8KERBY", 60);
+	ParkingMeter meter(60);
 	ParkingTicket ticket(car1, meter);
 
-	
+	cout << "The is your current fine: $" << ticket.getFine() << endl;
 
 	return 0;
 }

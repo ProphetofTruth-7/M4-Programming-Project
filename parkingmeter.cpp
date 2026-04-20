@@ -3,6 +3,6 @@ using namespace std;
 
 ParkingMeter::ParkingMeter(int minutes) : minutesBought(minutes) {}
 
-int ParkingMeter::getMinutes() {
+const int ParkingMeter::getMinutes() const{
     return minutesBought;
 }

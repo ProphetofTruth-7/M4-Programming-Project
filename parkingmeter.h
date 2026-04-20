@@ -11,7 +11,7 @@ public:
     ParkingMeter(int minutes);
 
     // Function Prototypes/Documentation //
-    int getMinutes();
+    const int getMinutes() const;
 
 };
 
