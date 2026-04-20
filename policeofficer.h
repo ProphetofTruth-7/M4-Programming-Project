@@ -17,8 +17,7 @@ public:
     const string getOfficerName() const;
     const int getOfficerNumber() const;
 
-	const void checkParking(const ParkedCar& car, const ParkingMeter& meter) const;
-    const void issueTicket(const ParkedCar& car, const ParkingMeter& meter) const;
+    const void checkParking(const ParkedCar& car, const ParkingMeter& meter, const ParkingTicket& ticket) const;
 
 };
 

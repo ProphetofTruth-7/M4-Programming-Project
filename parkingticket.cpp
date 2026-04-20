@@ -1,11 +1,11 @@
 #include "parkingticket.h"
 #include <cmath>
+#include <iostream>
 using namespace std;
 
 
 ParkingTicket::ParkingTicket(const ParkedCar& car, const ParkingMeter& meter, const PoliceOfficer& officer)
 {
-    // copy snapshot data from car and meter
     licenseNumber = car.getLicense();
     make = car.getMake();
     model = car.getModel();
@@ -35,6 +35,10 @@ const string ParkingTicket::getMake() const {
     return make; 
 }
 
+const string ParkingTicket::getColor() const {
+    return color;
+}
+
 const string ParkingTicket::getModel() const { 
     return model; 
 }
@@ -53,4 +57,21 @@ const string ParkingTicket::getOfficerName() const {
 
 const int ParkingTicket::getOfficerNumber() const {
     return officerNumber;
+}
+
+const void ParkingTicket::issueTicket() const {
+    cout << "Traffic Ticket" << endl;
+    cout << endl;
+    cout << "Officer Name: " << getOfficerName() << endl;
+    cout << "Officer Badge Number: " << getOfficerNumber() << endl;
+    cout << "Overage(in minutes): " << getMinutesParked() - getMinutesBought() << endl;
+    cout << "Fine: $" << getFine() << endl;
+    cout << endl;
+    cout << "Car Details: " << endl;
+	cout << "Make: " << getMake() << endl;
+    cout << "Model: " << getModel() << endl;
+    cout << "License: " << getLicenseNumber() << endl;
+    cout << "Color: " << getColor() << endl;
+    cout << "Make: " << getMake() << endl;
+
 }

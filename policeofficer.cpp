@@ -11,11 +11,12 @@ const int PoliceOfficer::getOfficerNumber() const {
 	return officerNumber;
 }
 
-const void PoliceOfficer::checkParking(const ParkedCar& car, const ParkingMeter& meter) const {
+const void PoliceOfficer::checkParking(const ParkedCar& car, const ParkingMeter& meter, const ParkingTicket& ticket) const {
 	if (meter.getMinutes() >= car.getMinutes()) {
 		//Valid Parking, No Ticket
 	}
 	else {
 		//Invalid Parking
+		ticket.issueTicket();
 	}
 }

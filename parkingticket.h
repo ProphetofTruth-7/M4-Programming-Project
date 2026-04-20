@@ -12,6 +12,7 @@ private:
     string licenseNumber;
     string make;
     string model;
+    string color;
     int minutesParked;
     int minutesBought;
     string officerName;
@@ -22,11 +23,14 @@ public:
     int getFine() const;
     const string getLicenseNumber() const;
     const string getMake() const;
+    const string getColor() const;
     const string getModel() const;
     int getMinutesParked() const;
     int getMinutesBought() const;
     const string getOfficerName() const;
     const int getOfficerNumber() const;
+
+    const void issueTicket() const;
 };
 
 #endif
