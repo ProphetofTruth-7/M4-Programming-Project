@@ -1,6 +1,5 @@
 #ifndef PARKINGTICKETHEADER_H
 #define PARKINGTICKETHEADER_H
-using namespace std;
 #include <string>
 #include "parkedcar.h"
 #include "parkingmeter.h"
@@ -9,25 +8,25 @@ using namespace std;
 class ParkingTicket {
 private:
     int fine;
-    string licenseNumber;
-    string make;
-    string model;
-    string color;
+    std::string licenseNumber;
+    std::string make;
+    std::string model;
+    std::string color;
     int minutesParked;
     int minutesBought;
-    string officerName;
+    std::string officerName;
     int officerNumber;
 public:
     ParkingTicket(const ParkedCar& car, const ParkingMeter& meter, const PoliceOfficer& officer);
 
     int getFine() const;
-    const string getLicenseNumber() const;
-    const string getMake() const;
-    const string getColor() const;
-    const string getModel() const;
+    const std::string getLicenseNumber() const;
+    const std::string getMake() const;
+    const std::string getColor() const;
+    const std::string getModel() const;
     int getMinutesParked() const;
     int getMinutesBought() const;
-    const string getOfficerName() const;
+    const std::string getOfficerName() const;
     const int getOfficerNumber() const;
 
     const void issueTicket() const;

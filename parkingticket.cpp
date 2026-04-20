@@ -1,7 +1,6 @@
 #include "parkingticket.h"
 #include <cmath>
 #include <iostream>
-using namespace std;
 
 
 ParkingTicket::ParkingTicket(const ParkedCar& car, const ParkingMeter& meter, const PoliceOfficer& officer)
@@ -27,19 +26,19 @@ int ParkingTicket::getFine() const {
     return fine; 
 }
 
-const string ParkingTicket::getLicenseNumber() const { 
+const std::string ParkingTicket::getLicenseNumber() const {
     return licenseNumber; 
 }
 
-const string ParkingTicket::getMake() const {
+const std::string ParkingTicket::getMake() const {
     return make; 
 }
 
-const string ParkingTicket::getColor() const {
+const std::string ParkingTicket::getColor() const {
     return color;
 }
 
-const string ParkingTicket::getModel() const { 
+const std::string ParkingTicket::getModel() const {
     return model; 
 }
 
@@ -51,7 +50,7 @@ int ParkingTicket::getMinutesBought() const {
     return minutesBought; 
 }
 
-const string ParkingTicket::getOfficerName() const {
+const std::string ParkingTicket::getOfficerName() const {
     return officerName;
 }
 
@@ -60,18 +59,17 @@ const int ParkingTicket::getOfficerNumber() const {
 }
 
 const void ParkingTicket::issueTicket() const {
-    cout << "Traffic Ticket" << endl;
-    cout << endl;
-    cout << "Officer Name: " << getOfficerName() << endl;
-    cout << "Officer Badge Number: " << getOfficerNumber() << endl;
-    cout << "Overage(in minutes): " << getMinutesParked() - getMinutesBought() << endl;
-    cout << "Fine: $" << getFine() << endl;
-    cout << endl;
-    cout << "Car Details: " << endl;
-	cout << "Make: " << getMake() << endl;
-    cout << "Model: " << getModel() << endl;
-    cout << "License: " << getLicenseNumber() << endl;
-    cout << "Color: " << getColor() << endl;
-    cout << "Make: " << getMake() << endl;
+    std::cout << "Traffic Ticket" << std::endl;
+    std::cout << std::endl;
+    std::cout << "Officer Name: " << getOfficerName() << std::endl;
+    std::cout << "Officer Badge Number: " << getOfficerNumber() << std::endl;
+    std::cout << "Overage(in minutes): " << getMinutesParked() - getMinutesBought() << std::endl;
+    std::cout << "Fine: $" << getFine() << std::endl;
+    std::cout << std::endl;
+    std::cout << "Car Details: " << std::endl;
+    std::cout << "Make: " << getMake() << std::endl;
+    std::cout << "Model: " << getModel() << std::endl;
+    std::cout << "License: " << getLicenseNumber() << std::endl;
+    std::cout << "Color: " << getColor() << std::endl;
 
 }

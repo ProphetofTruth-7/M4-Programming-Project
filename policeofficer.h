@@ -2,22 +2,22 @@
 #define POLICEOFFICERHEADER_H
 #include "parkingmeter.h"
 #include "parkedcar.h"
-#include "parkingticket.h"
+#include <string>
 
 // This is the Header File, containing Prototypes for all Member Functions and the PoliceOfficer Class itself //
 class PoliceOfficer {
 private:
-    string officerName;
+    std::string officerName;
     int officerNumber;
 public:
     // Constructor //
-    PoliceOfficer(string name, int number);
+    PoliceOfficer(std::string name, int number);
 
     // Function Prototypes/Documentation //
-    const string getOfficerName() const;
+    const std::string getOfficerName() const;
     const int getOfficerNumber() const;
 
-    const void checkParking(const ParkedCar& car, const ParkingMeter& meter, const ParkingTicket& ticket) const;
+    void checkParking(const ParkedCar& car, const ParkingMeter& meter, const ParkingTicket& ticket) const;
 
 };
 

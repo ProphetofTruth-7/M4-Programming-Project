@@ -1,25 +1,24 @@
 #ifndef PARKEDCARHEADER_H
 #define PARKEDCARHEADER_H
 #include <string>
-using namespace std;
 
 // This is the Header File, containing Prototypes for all Member Functions and the ParkedCar Class itself //
 class ParkedCar {
 private:
-    string make;
-    string model;
-    string color;
-    string licenseNumber;
+    std::string make;
+    std::string model;
+    std::string color;
+    std::string licenseNumber;
     int minutesParked;
 public:
     // Constructor //
-    ParkedCar(string make, string model, string color, string license, int minutes);
+    ParkedCar(std::string make, std::string model, std::string color, std::string license, int minutes);
 
     // Function Prototypes/Documentation //
-    const string& getMake() const;
-    const string& getModel() const;
-    const string& getColor() const;
-    const string& getLicense() const;
+    const std::string& getMake() const;
+    const std::string& getModel() const;
+    const std::string& getColor() const;
+    const std::string& getLicense() const;
     const int getMinutes() const;
 
 };
