@@ -7,10 +7,11 @@
 int main()
 {
 	ParkedCar car1("Dodge", "Charger", "Blue", "B8KERBY", 60);
-	ParkingMeter meter(60);
-	ParkingTicket ticket(car1, meter);
+	ParkingMeter meter1(60);
+	PoliceOfficer officer1("Officer Nelson" , 80085);
+	ParkingTicket ticket(car1, meter1, officer1);
 
-	cout << "The is your current fine: $" << ticket.getFine() << endl;
+	//Start. Officer Nelson needs to read both the car and the meter
 
 	return 0;
 }

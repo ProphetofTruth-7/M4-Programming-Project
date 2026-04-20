@@ -4,6 +4,7 @@ using namespace std;
 #include <string>
 #include "parkedcar.h"
 #include "parkingmeter.h"
+#include "policeofficer.h"
 
 class ParkingTicket {
 private:
@@ -13,15 +14,19 @@ private:
     string model;
     int minutesParked;
     int minutesBought;
+    string officerName;
+    int officerNumber;
 public:
-    ParkingTicket(const ParkedCar& car, const ParkingMeter& meter);
+    ParkingTicket(const ParkedCar& car, const ParkingMeter& meter, const PoliceOfficer& officer);
 
     int getFine() const;
-    const string& getLicenseNumber() const;
-    const string& getMake() const;
-    const string& getModel() const;
+    const string getLicenseNumber() const;
+    const string getMake() const;
+    const string getModel() const;
     int getMinutesParked() const;
     int getMinutesBought() const;
+    const string getOfficerName() const;
+    const int getOfficerNumber() const;
 };
 
 #endif

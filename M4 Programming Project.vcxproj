@@ -131,11 +131,13 @@
     <ClCompile Include="parkedcar.cpp" />
     <ClCompile Include="parkingmeter.cpp" />
     <ClCompile Include="parkingticket.cpp" />
+    <ClCompile Include="policeofficer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="parkedcar.h" />
     <ClInclude Include="parkingmeter.h" />
     <ClInclude Include="parkingticket.h" />
+    <ClInclude Include="policeofficer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

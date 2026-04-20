@@ -27,6 +27,9 @@
     <ClCompile Include="parkingticket.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="policeofficer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="parkedcar.h">
@@ -36,6 +39,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="parkingticket.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="policeofficer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
