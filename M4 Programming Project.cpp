@@ -57,10 +57,26 @@ int main()
     cout << endl;
     cout << endl;
 
+    cout << "These are the values of the Second Array: " << endl;
+    userarray2.print();
+
+    cout << endl;
+    cout << endl;
+    cout << endl;
+
     // COPY CONSTRUCTOR ARRAY
     NumberArray userarray3 = userarray;
     cout << "A copy of the First Array has been created! Here are it's values: " << endl;
     userarray3.print();
+
+    cout << endl;
+    cout << endl;
+    cout << endl;
+
+    // COPY ASSIGN ARRAY
+    userarray2 = userarray;
+    cout << "Your First Array's values has been Copy-Assigned to the Second Array. Here are the new Second Array values: " << endl;
+    userarray2.print();
 
     return 0;
 }
