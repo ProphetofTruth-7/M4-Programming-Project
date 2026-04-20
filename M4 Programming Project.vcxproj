@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{f27a2b18-d72d-4c56-b72f-6a22f5910e93}</ProjectGuid>
+    <ProjectGuid>{8FA26790-DB50-FC8C-2951-25536D25D059}</ProjectGuid>
     <RootNamespace>M4ProgrammingProject</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
