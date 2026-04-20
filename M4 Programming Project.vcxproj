@@ -130,6 +130,7 @@
     <ClCompile Include="M4 Programming Project.cpp" />
     <ClCompile Include="parkedcar.cpp" />
     <ClCompile Include="parkingmeter.cpp" />
+    <ClCompile Include="parkingticket.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="parkedcar.h" />

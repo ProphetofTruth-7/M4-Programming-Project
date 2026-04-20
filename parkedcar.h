@@ -16,10 +16,10 @@ public:
     ParkedCar(string make, string model, string color, string license, int minutes);
 
     // Function Prototypes/Documentation //
-    string getMake();
-    string getModel();
-    string getColor();
-    string getLicense();
+    const string& getMake();
+    const string& getModel();
+    const string& getColor();
+    const string& getLicense();
     int getMinutes();
 
 };

@@ -1,18 +1,27 @@
 #ifndef PARKINGTICKETHEADER_H
 #define PARKINGTICKETHEADER_H
 using namespace std;
+#include <string>
+#include "parkedcar.h"
+#include "parkingmeter.h"
 
-// This is the Header File, containing Prototypes for all Member Functions and the ParkingTicket Class itself //
 class ParkingTicket {
 private:
+    int fine;
+    string licenseNumber;
+    string make;
+    string model;
     int minutesParked;
+    int minutesBought;
 public:
-    // Constructor //
-    ParkingTicket(int minutes);
+    ParkingTicket(const ParkedCar& car, const ParkingMeter& meter);
 
-    // Function Prototypes/Documentation //
-    int getMinutes();
-
+    int getFine() const;
+    const string& getLicenseNumber() const;
+    const string& getMake() const;
+    const string& getModel() const;
+    int getMinutesParked() const;
+    int getMinutesBought() const;
 };
 
 #endif
